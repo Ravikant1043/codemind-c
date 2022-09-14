@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+string tt(int a,int b){
+    string s;
+    while(a){
+        s+=to_string(a%b);
+        a=a/b;
+    }
+    return s;
+}
+int main(){
+    int a,b,c=0,m=0;
+    bool k=false;
+    cin>>a>>b;
+    string s=tt(a,b);
+    for(int i=0;s[i]!='\0';i++){
+        if(s[i]=='0'){
+        c++;
+            k=true;
+        }
+        else{
+            m=max(c,m);
+            c=0;
+        }
+    }
+    if(k==false)
+    cout<<-1;
+    else
+    cout<<m;
+    return 0;
+}
