@@ -31,5 +31,5 @@ int main()
         printf("-1");
     }
     else
-    printf("%.2f",avg);
+    printf("%.2f",avg );
 }
